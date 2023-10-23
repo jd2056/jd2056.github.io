@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<h2>Week 1</h2>
-<h3>Javascript Prt 1 (Basics) 1.1</h3>
-<div id="textToChange">This text colour will change to red when the button is pressed</div>
-<button onclick="colourChangeButton()">Change colour</button>
+    <html>
+        <body>
+            <h1>F28WP Lab Work</h1>
+            <h2>Week 1</h2>
+            <div>Hello World</div>
+            <h2>Week 2</h2>
+            <h3>Javascript Prt 1 (Basics) 1.1</h3>
+            <div id="textToChange">This text colour will change to red when the button is pressed</div>
+            <button onclick="colourChangeButton()">Change colour</button>
 
-<script>
-    function colourChangeButton() {
-      textToChange.style.color = 'red';
-    }
-    </script>
-</body>
+            <h2>Week 3</h2>
+            <h3>Javascript Prt 2 1.1</h3>
+
+        <script>
+        function colourChangeButton() {
+            textToChange.style.color = 'red';
+        }
+                    document.body.style.height = '500pt';
+                    const script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.2.2/cookiebanner.min.js';
+                    script.id = 'cookiebanner';
+                    script.setAttribute(data-height)   = '200px'; // non-standard attribute (may need to use 'setAttribute(..)'
+                    script['data-position'] = 'top';
+
+                    script.onload = function()
+                    {
+                        script['data-message']  = 'We use cookies!';
+                        script.setAttribute('data-moreinfo') = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                        console.log('loaded script');
+                    }  
+                    document.head.appendChild(script);
+                    console.log('ready');
+        </script>
+    </body>
 </html>

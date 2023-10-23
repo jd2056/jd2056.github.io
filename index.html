@@ -8,30 +8,39 @@
             <h3>Javascript Prt 1 (Basics) 1.1</h3>
             <div id="textToChange">This text colour will change to red when the button is pressed</div>
             <button onclick="colourChangeButton()">Change colour</button>
+            <script>
+                function colourChangeButton() {
+                    textToChange.style.color = 'red';
+                }
+            </script>
 
             <h2>Week 3</h2>
             <h3>Javascript Prt 2 1.1</h3>
 
-        <script>
-        function colourChangeButton() {
-            textToChange.style.color = 'red';
-        }
-                    document.body.style.height = '500pt';
-                    const script = document.createElement('script');
+            <script>
+                function initCookieConsent() {
+                    document.body.style.height = '200pt';
+                    var script = document.createElement('script');
                     script.type = 'text/javascript';
                     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.2.2/cookiebanner.min.js';
                     script.id = 'cookiebanner';
-                    script.setAttribute(data-height)   = '200px'; // non-standard attribute (may need to use 'setAttribute(..)'
-                    script['data-position'] = 'top';
+                    script.setAttribute('data-height','20px');
+                    script.setAttribute('data-position','bottom');
+                    script.setAttribute('data-message','We use cookies!');
+                    document.head.appendChild(script); 
 
                     script.onload = function()
                     {
-                        script['data-message']  = 'We use cookies!';
-                        script.setAttribute('data-moreinfo') = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                         console.log('loaded script');
-                    }  
-                    document.head.appendChild(script);
-                    console.log('ready');
-        </script>
-    </body>
-</html>
+                    }
+                }
+
+                initCookieConsent();
+                console.log('ready');
+            </script>
+
+            <div>The cookie banner should have loaded at the bottom of the screen now.</div>
+
+            
+        </body>
+    </html>
